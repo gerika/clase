@@ -1,3 +1,3 @@
 <?php
 
-echo "holaa";
+echo "holaa d variables"; 
