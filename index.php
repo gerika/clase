@@ -22,5 +22,5 @@
    }
 
   $modelClase = new Variables();
-  $mensaje = "Holas";
+  $mensaje = null;
   $modelClase->validarVariable($mensaje);
