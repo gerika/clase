@@ -1,19 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: diomedes
- * Date: 15/03/15
- * Time: 02:59 PM
- */
-namespace clase;
 
 class Persona
 {
-    private $nombre;
-    private $apellido;
-    private $edad;
 
-    public function  __construct()
+    protected $nombre;
+    private $apellido;
+    private $sexo;
+
+    public function __construct()
     {
 
     }
@@ -26,9 +20,11 @@ class Persona
         return $this->nombre;
     }
 
+
     /**
      * @param mixed $nombre
      */
+
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
@@ -42,6 +38,7 @@ class Persona
         return $this->apellido;
     }
 
+
     /**
      * @param mixed $apellido
      */
@@ -49,6 +46,7 @@ class Persona
     {
         $this->apellido = $apellido;
     }
+
 
     /**
      * @return mixed
@@ -64,11 +62,17 @@ class Persona
     public function setEdad($edad)
     {
         $this->edad = $edad;
+
+    public function getSexo()
+    {
+        return $this->sexo;
+    }
+
+    public function setSexo($sexo)
+    {
+        $this->sexo = $sexo;
     }
 
 
 }
-
-
-
 
