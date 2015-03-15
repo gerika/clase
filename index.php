@@ -5,6 +5,7 @@
       {
 
       }
+
       /**
        * Valida la si una variable esta definida
        *
@@ -13,7 +14,7 @@
        */
       public function validarVariableIsset($variale)
       {
-         if( isset($variale) ) {
+         if ( isset($variale) ) {
             echo "Esta variable esta definida </br>" ;
          } else {
             echo "Esta variable No esta definida </br>";
@@ -22,7 +23,7 @@
 
       public function validarVariableEmpy($variale)
       {
-         if( empty($variale) ) {
+         if ( empty($variale) ) {
             echo "La variable esta vacia </br>" ;
          } else {
             echo "La variable No esta vacia </br>";
@@ -31,6 +32,6 @@
    }
 
   $modelClase = new Variables();
-  $mensaje = "Holas";
+  $mensaje = 0;
   $modelClase->validarVariableIsset($mensaje);
   $modelClase->validarVariableEmpy($mensaje);
