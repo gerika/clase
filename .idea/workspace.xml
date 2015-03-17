@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4a683cd-9cba-4738-a01d-beb398d8bad1" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\clase\Figura.php" afterPath="" />
-    </list>
+    <list default="true" id="f4a683cd-9cba-4738-a01d-beb398d8bad1" name="Default" comment="" />
     <ignored path="clase.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
