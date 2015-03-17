@@ -3,10 +3,11 @@ include 'persona.php';
 
 class cliente extends Persona{
      private $codigo_cliente;
-     private $categorias;
-    public function  __construct()
-    {
 
+    public function  __construct($nombre,$apellido,$codigo_cliente)
+    {
+       parent::__construct($nombre,$apellido);
+        $this->codigo_cliente=$codigo_cliente;
     }
     public function getCodigoCliente()
     {
@@ -18,26 +19,10 @@ class cliente extends Persona{
         $this->codigo_cliente = $codigo_cliente;
     }
 
-    public function getCategorias()
-    {
-        return $this->categorias;
-    }
-
-    public function setCategorias($categorias)
-    {
-        $this->categorias = $categorias;
-    }
-    public function mostrar_datos()
-    {
-        return $this->nombre;
-    }
-
 }
-/*
-$c=new cliente();
-$c->setNombre("giuliana");
-$c->setCodigoCliente("1656757");
+
+$c=new cliente("giuliana","pablo",123);
+
 echo $c->getNombre();
-echo $c->nombre;
-//echo $c->codigo_cliente;
-*/
+
+

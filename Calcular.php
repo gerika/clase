@@ -28,7 +28,6 @@ class Calcular  implements Adapter {
 }
 $c=new Calcular();
 $c->setConexion("Triangulo");
-
 (object)$n= $c->getConexion();
 echo get_class($n);
 $n->calcular_area(3);
