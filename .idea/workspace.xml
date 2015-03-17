@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4a683cd-9cba-4738-a01d-beb398d8bad1" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\clase\index.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adapter.php" afterPath="$PROJECT_DIR$/Adapter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calcular.php" afterPath="$PROJECT_DIR$/Calcular.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cuadrado.php" afterPath="$PROJECT_DIR$/Cuadrado.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Operaciones.php" afterPath="$PROJECT_DIR$/Operaciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Triangulo.php" afterPath="$PROJECT_DIR$/Triangulo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\clase\Figura.php" afterPath="" />
     </list>
     <ignored path="clase.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,30 +77,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calcular.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Calcular.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Calcular.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="782">
-              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.33452594" vertical-offset="0" max-vertical-offset="782">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Figura.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Figura.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Adapter.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Adapter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Adapter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1824687" vertical-offset="0" max-vertical-offset="559">
+            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
               <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
@@ -249,7 +233,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -381,14 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Figura.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cuadrado.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="493">
@@ -405,18 +381,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calcular.php">
+    <entry file="file://$PROJECT_DIR$/Adapter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="782">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adapter.php">
+    <entry file="file://$PROJECT_DIR$/Calcular.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1824687" vertical-offset="0" max-vertical-offset="559">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.33452594" vertical-offset="0" max-vertical-offset="782">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
           <folding />
         </state>
       </provider>
