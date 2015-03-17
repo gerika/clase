@@ -1,12 +1,17 @@
 <?php
-include 'persona.php';
+//namespace clase\herencia;
+use  Persona;
 
-class cliente extends Persona{
+//include 'persona.php';
+
+class Cliente extends Persona
+{
      private $codigo_cliente;
      private $categorias;
+
     public function  __construct()
     {
-
+        $personaModel = new Persona();
     }
     public function getCodigoCliente()
     {
