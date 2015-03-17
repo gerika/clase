@@ -1,17 +1,19 @@
 <?php
-include 'Operaciones.php';
+include_once 'Operaciones.php';
 class Cuadrado implements Operaciones{
     private $lado ;
     private $numero_lados;
+    /*
     public function __construct($lado,$numero_lados)
     {
         $this->lado=$lado;
         $this->numero_lados=$numero_lados;
     }
-    public function calcular_area()
+    */
+    public function calcular_area($lado)
     {
-        $area=pow($this->lado,2);
-        return $area;
+        $area=pow($lado,2);
+        echo "es cuadr". $area;
     }
     public function calcular_perimetro()
     {
@@ -19,6 +21,3 @@ class Cuadrado implements Operaciones{
         return $p;
     }
 }
- $c=new Cuadrado(3,4);
- echo $c->calcular_area();
-echo $c->calcular_perimetro();
