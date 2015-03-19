@@ -1,14 +1,30 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: diomedes
- * Date: 16/03/15
- * Time: 10:30 PM
- */
-
-namespace model;
+require_once 'ConectionMysql.php';
 
 
-class Usuario {
+class Usuario  extends  ConectionMsql
+{
+    protected $_conection;
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->_conection = $this->getConection();
+    }
+
+    public function getAllUsuarios()
+    {
+        $sql = "Select * from usuario";
+        $result = $this->_conection->query($sql);
+        $this->_conection->close();
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return array();
+
+    }
 }
