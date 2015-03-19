@@ -1,7 +1,9 @@
-
 <?php
+namespace figuras;
 include 'Operaciones.php';
-class Triangulo  implements Operaciones {
+
+class Triangulo  implements Operaciones
+{
     private $lado ;
     private $numero_lados;
     /*
@@ -15,7 +17,7 @@ class Triangulo  implements Operaciones {
     {
 
         $area=$lado*$lado/2;
-        echo "es triand". $area;
+        echo "es triangulo". $area;
     }
 
     public function calcular_perimetro()

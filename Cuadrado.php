@@ -1,6 +1,9 @@
 <?php
+namespace figuras;
 include_once 'Operaciones.php';
-class Cuadrado implements Operaciones{
+
+class Cuadrado implements Operaciones
+{
     private $lado ;
     private $numero_lados;
     /*
@@ -13,7 +16,7 @@ class Cuadrado implements Operaciones{
     public function calcular_area($lado)
     {
         $area=pow($lado,2);
-        echo "es cuadr". $area;
+        echo "es cuadrado". $area;
     }
     public function calcular_perimetro()
     {

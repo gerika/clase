@@ -1,14 +1,19 @@
 <?php
-include 'persona.php';
 
-class cliente extends Persona{
+include 'Persona.php';
+
+
+class Cliente extends Persona
+{
      private $codigo_cliente;
+
 
     public function  __construct($nombre,$apellido,$codigo_cliente)
     {
        parent::__construct($nombre,$apellido);
         $this->codigo_cliente=$codigo_cliente;
     }
+
     public function getCodigoCliente()
     {
         return $this->codigo_cliente;
@@ -23,6 +28,7 @@ class cliente extends Persona{
 
 $c=new cliente("giuliana","pablo",123);
 
-echo $c->getNombre();
+echo $c->getNombre()."<br>";
+echo $c->getCodigoCliente();
 
 

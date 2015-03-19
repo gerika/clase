@@ -1,5 +1,6 @@
 <?php
 
+
 class Persona
 {
     protected $nombre;
@@ -38,6 +39,18 @@ class Persona
     public function setEdad($edad)
     {
         $this->edad = $edad;
+
+    }
+
+    public function getSexo()
+    {
+        return $this->sexo;
+    }
+
+    public function setSexo($sexo)
+    {
+        $this->sexo = $sexo;
+
     }
 
 }
