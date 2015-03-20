@@ -6,10 +6,9 @@ $opcion = $_GET['op'];
 
 switch ($opcion) {
     case 'add':
-
+       header("Location:../view/usuario/addUsuario.php");
         break;
     case 'edit':
-
         break;
     case 'delete':
 
