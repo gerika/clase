@@ -1,11 +1,12 @@
 <?php
    include_once '../../model/Usuario.php';
+
     if(isset($_POST['insertar']))
     {
-        if(!empty($_POST['nombre'])&& !empty($_POST['apellido']))
+        if(!empty($_POST['nombre1'])&& !empty($_POST['apellido1']))
         {
             $usuario=new Usuario();
-            $usuario->editarUsuario();
+            $usuario->editarUsuario($_POST['nombre1'],$_POST['apellido1']);
         }
         else{
             echo " Es necesario rellenar todos los campos";
@@ -20,12 +21,12 @@
            <tr><h2>Actualizar Usuario</h2></tr>
            <tr>
                <td><p>Nombre:</p></td>
-               <td><input type="text" name="nombre" placeholder="Ingrese nombre"></td>
+               <td><input type="text" name="nombre1" placeholder="Ingrese nombre"></td>
            </tr>
            <tr></tr>
            <tr>
                <td><p>Apellido:</p></td>
-               <td><input type="text" name="apellido" placeholder="Ingrese Apellido"></td>
+               <td><input type="text" name="apellido1" placeholder="Ingrese Apellido"></td>
            </tr>
        </table>
        <br>

@@ -30,13 +30,13 @@ class Usuario  extends  ConectionMsql
         $this->_conection->close();
     }
 
-    public function addUsuarios()
+    public function editarUsuarios()
     {
-       /*
-        $sql_ = "UPDATE usuario SET  nombres
-      */
+        $sql_ = "UPDATE usuario SET  nombres,apellidos) VALUES ('" . $this->nombre . "','" . $this->apellido . "')";
+        $this->_conection->query($sql_);
+        header("Location:http://localhost/clase/controller/ControllerUsuario.php?op=listar");
     }
-    public function editarUsuario()
+    public function addUsuarios()
     {
 
         $sql_ = "INSERT INTO usuario (nombres,apellidos) VALUES ('" . $this->nombre . "','" . $this->apellido . "')";
