@@ -1,13 +1,17 @@
 <?php
+session_start();
 include '../../model/Usuario.php';
+
 if(isset($_POST['verificar']))
 {
     if(!empty($_POST['nombre'])&& !empty($_POST['apellido']))
     {
         $usuario=new Usuario();
-        $verificar=$usuario->verificarUsuario();
+        $verificar=$usuario->verificarUsuario($_POST['nombre'],$_POST['apellido']);
         if($verificar===TRUE)
         {
+            $_SESSION['nombre']=$_POST['nombre'];
+            $_SESSION['apellido']=$_POST['apellido'];
             header("Location:editarUsuarioRegistrado.php");
         }
         else{
@@ -23,7 +27,7 @@ if(isset($_POST['verificar']))
       <title>Editar</title>
   </header>
   <body>
-  <form action ="editUsuario.php" method="post">
+  <form action ="editarUsuario.php" method="post">
       <table>
           <tr><h2>Editar Usuario</h2></tr>
           <tr><h3>verificar Usuario</h3></tr>

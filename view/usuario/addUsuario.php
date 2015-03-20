@@ -5,7 +5,7 @@
         if(!empty($_POST['nombre'])&& !empty($_POST['apellido']))
         {
             $usuario=new Usuario();
-            $usuario->addUsuarios();
+            $usuario->addUsuarios($_POST['nombre'],$_POST['apellido']);
         }
         else{
             echo " Es necesario rellenar todos los campos";

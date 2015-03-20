@@ -5,15 +5,11 @@ require_once 'ConectionMysql.php';
 class Usuario  extends  ConectionMsql
 {
     protected $_conection;
-    private $nombre;
-    private $apellido;
 
     public function __construct()
     {
         parent::__construct();
         $this->_conection = $this->getConection();
-        $this->nombre = $_POST['nombre'];
-        $this->apellido = $_POST['apellido'];
     }
 
     public function getAllUsuarios()
@@ -30,23 +26,22 @@ class Usuario  extends  ConectionMsql
         $this->_conection->close();
     }
 
-    public function editarUsuarios()
+    public function editarUsuario($nombre1,$apellido1,$nombre2,$apellido2)
     {
-        $sql_ = "UPDATE usuario SET  nombres,apellidos) VALUES ('" . $this->nombre . "','" . $this->apellido . "')";
+        $sql_ = "UPDATE usuario SET  nombres='".$nombre2."',apellidos='".$apellido2."' WHERE nombres='".$nombre1."' AND apellidos='".$apellido1."'";
         $this->_conection->query($sql_);
         header("Location:http://localhost/clase/controller/ControllerUsuario.php?op=listar");
     }
-    public function addUsuarios()
+    public function addUsuarios($nombre,$apellido)
     {
 
-        $sql_ = "INSERT INTO usuario (nombres,apellidos) VALUES ('" . $this->nombre . "','" . $this->apellido . "')";
+        $sql_ = "INSERT INTO usuario (nombres,apellidos) VALUES ('" . $nombre . "','" . $apellido . "')";
         $this->_conection->query($sql_);
         header("Location:http://localhost/clase/controller/ControllerUsuario.php?op=listar");
     }
-    public function verificarUsuario()
+    public function verificarUsuario($nombre,$apellido)
     {
-
-        $sql = "SELECT * FROM usuario WHERE nombres='" . $this->nombre . "' AND apellidos='" . $this->apellido . "'";
+        $sql = "SELECT * FROM usuario WHERE nombres='" . $nombre . "' AND apellidos='" . $apellido . "'";
         $result = $this->_conection->query($sql);
         if ($result->num_rows > 0) {
            return TRUE;
@@ -54,5 +49,11 @@ class Usuario  extends  ConectionMsql
             return FALSE;
 
         }
+    }
+    public function deleteUsuario($nombre,$apellido)
+    {
+        $sql="DELETE FROM usuario WHERE nombres='".$nombre."' AND apellidos='".$apellido."'";
+        $this->_conection->query($sql);
+        header("Location:http://localhost/clase/controller/ControllerUsuario.php?op=listar");
     }
 }
