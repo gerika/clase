@@ -18,14 +18,29 @@ switch ($opcion) {
         }
         break;
     case 'edit':
-        header("Location:../view/usuario/editarUsuario.php");
-
+        $modelUsuario = new Usuario();
+        $usuario = $modelUsuario->getUsuario($_GET['id']);
+        header("Location:../view/usuario/editUsuario.php?usuario=".serialize($usuario));
         break;
     case 'editSave':
-        header("Location:../view/usuario/editarUsuario.php");
+        $modelUsuario = new Usuario();
+        $data = $_POST;
+        $result = $modelUsuario->editUsuario($data);
+        if ($result == true) {
+            $modelUsuario = new Usuario();
+            $lista = $modelUsuario->getAllUsuarios();
+            header("Location: http://localhost/clase/view/usuario/listarUsuario.php?lista=".serialize($lista). "&result=1");
+        }
         break;
     case 'delete':
-        header("Location:../view/usuario/deleteUsuario.php");
+        $modelUsuario = new Usuario();
+        $idUsuario = $_GET['id'];
+        $result = $modelUsuario->deleteUsuario($idUsuario);
+        if ($result == true) {
+            $modelUsuario = new Usuario();
+            $lista = $modelUsuario->getAllUsuarios();
+            header("Location: http://localhost/clase/view/usuario/listarUsuario.php?lista=".serialize($lista). "&result=1");
+        }
         break;
     case 'listar':
         $modelUsuario = new Usuario();

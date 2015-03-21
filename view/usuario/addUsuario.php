@@ -12,7 +12,6 @@
                     <td>Nombres:</td>
                     <td> <input type="text" name="txtNombres" placeholder="Ingrese sus nombres"></td>
                 </tr>
-                <tr></tr>
                 <tr>
                     <td>Apellidos:</td>
                     <td> <input type="text" name="txtApellidos" placeholder="Ingrese sus apellidos"></td>

@@ -30,9 +30,9 @@ class Usuario  extends  ConectionMsql
 
     public function editUsuario($data)
     {
-        $sql = "UPDATE usuario SET  nombres='".$nombre2."',apellidos='".$apellido2."' WHERE nombres='".$nombre1."' AND apellidos='".$apellido1."'";
-        $this->_conection->query($sql);
-
+        $sql = "UPDATE usuario SET  nombres='".$data['txtNombres']."',apellidos='".$data['txtApellidos']."' WHERE id='".$data['id']."' ";
+        $result = $this->_conection->query($sql);
+        return $result;
     }
 
     public function addUsuario($data)
@@ -42,12 +42,28 @@ class Usuario  extends  ConectionMsql
         return $result;
     }
 
-    public function deleteUsuario($nombre,$apellido)
+    public function deleteUsuario($idUsuario)
     {
-        $sql="DELETE FROM usuario WHERE nombres='".$nombre."' AND apellidos='".$apellido."'";
-        $this->_conection->query($sql);
-
+        $sql="DELETE FROM usuario WHERE id='".$idUsuario."' ";
+        $result = $this->_conection->query($sql);
+        return $result;
     }
 
+    public function getUsuario($idUsuario)
+    {
+        $sql = "Select * from usuario where id=$idUsuario";
+        $result = $this->_conection->query($sql);
+
+        $this->_conection->close();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $data = $row;
+                break;
+            }
+            //var_dump($data);exit;
+            return $data;
+        }
+        return array();
+    }
 
 }
