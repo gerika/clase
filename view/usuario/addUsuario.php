@@ -5,7 +5,12 @@
          <title></title>
      </head>
     <body>
-        <h2>Ingresar Datos</h2>
+        <?php if( !empty($_GET['error']) ) :?>
+            <?php if( $_GET['error'] == 1 ) :?>
+                Los campos son requeridos
+            <?php endif;?>
+        <?php endif;?>
+        <h2>Ingresar Usuario</h2>
         <form method="POST" action="/clase/controller/ControllerUsuario.php" >
             <table>
                 <tr>

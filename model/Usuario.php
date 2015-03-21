@@ -90,4 +90,21 @@ class Usuario  extends  ConectionMsql
         }
     }
 
+    public function validInputs($inputs)
+    {
+        if( isset($inputs['txtNombres']) && isset($inputs['txtApellidos'])) {
+            $inputs['txtNombres'] = trim($inputs['txtNombres']);
+            $inputs['txtApellidos'] = trim($inputs['txtApellidos']);
+
+        } else {
+            return false;
+        }
+
+        if ( empty($inputs['txtNombres']) || empty($inputs['txtApellidos']) ) {
+            return false;
+        }
+
+        return true;
+    }
+
 }
