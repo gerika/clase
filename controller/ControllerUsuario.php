@@ -1,7 +1,6 @@
 <?php
 require_once '../model/Usuario.php';
 
-
 $opcion = $_REQUEST['op'];
 switch ($opcion) {
     case 'add':

@@ -15,55 +15,79 @@ class Usuario  extends  ConectionMsql
 
     public function getAllUsuarios()
     {
-        $sql = "Select * from usuario";
-        $result = $this->_conection->query($sql);
+        try {
+            $sql = "Select * from usuario";
+            $result = $this->_conection->query($sql);
 
-        $this->_conection->close();
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $data[] = $row;
+            $this->_conection->close();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $data[] = $row;
+                }
+                return $data;
             }
-            return $data;
+            return array();
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
         }
-        return array();
     }
 
     public function editUsuario($data)
     {
-        $sql = "UPDATE usuario SET  nombres='".$data['txtNombres']."',apellidos='".$data['txtApellidos']."' WHERE id='".$data['id']."' ";
-        $result = $this->_conection->query($sql);
-        return $result;
+        try {
+            $sql = "UPDATE usuario SET  nombres='".$data['txtNombres']."',apellidos='".$data['txtApellidos']."' WHERE id='".$data['id']."' ";
+            $result = $this->_conection->query($sql);
+            return $result;
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 
     public function addUsuario($data)
     {
-        $sql = "INSERT INTO usuario (nombres,apellidos) VALUES ('" . $data['txtNombres'] . "','" . $data['txtApellidos'] . "')";
-        $result = $this->_conection->query($sql);
-        return $result;
+        try {
+            $sql = "INSERT INTO usuario (nombres,apellidos) VALUES ('" . $data['txtNombres'] . "','" . $data['txtApellidos'] . "')";
+            $result = $this->_conection->query($sql);
+            return $result;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 
     public function deleteUsuario($idUsuario)
     {
-        $sql="DELETE FROM usuario WHERE id='".$idUsuario."' ";
-        $result = $this->_conection->query($sql);
-        return $result;
+        try {
+            $sql="DELETE FROM usuario WHERE id='".$idUsuario."' ";
+            $result = $this->_conection->query($sql);
+            return $result;
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 
     public function getUsuario($idUsuario)
     {
-        $sql = "Select * from usuario where id=$idUsuario";
-        $result = $this->_conection->query($sql);
+        try {
+            $sql = "Select * from usuario where id=$idUsuario";
+            $result = $this->_conection->query($sql);
 
-        $this->_conection->close();
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $data = $row;
-                break;
+            $this->_conection->close();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $data = $row;
+                    break;
+                }
+                //var_dump($data);exit;
+                return $data;
             }
-            //var_dump($data);exit;
-            return $data;
+            return array();
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
         }
-        return array();
     }
 
 }
