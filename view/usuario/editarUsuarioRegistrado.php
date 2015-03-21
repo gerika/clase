@@ -14,7 +14,7 @@
             unset($apellido);
         }
         else{
-            echo " Es necesario rellenar todos los campos";
+            echo '<script>alert("Usted necesita rellenar todos los campos ");</script>';
         }
 
     }

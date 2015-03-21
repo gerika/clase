@@ -1,7 +1,7 @@
 <?php
 
 require_once 'ConectionMysql.php';
-//include_once '../view/usuario/addUsuario.php';
+
 class Usuario  extends  ConectionMsql
 {
     protected $_conection;
@@ -10,6 +10,7 @@ class Usuario  extends  ConectionMsql
     {
         parent::__construct();
         $this->_conection = $this->getConection();
+
     }
 
     public function getAllUsuarios()

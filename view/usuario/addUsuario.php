@@ -1,19 +1,20 @@
 <?php
   include_once '../../model/Usuario.php';
-    if(isset($_POST['insertar']))
+if(isset($_POST['insertar']))
+{
+    if(!empty($_POST['nombre'])&& !empty($_POST['apellido']))
     {
-        if(!empty($_POST['nombre'])&& !empty($_POST['apellido']))
-        {
-            $usuario=new Usuario();
-            $usuario->addUsuarios($_POST['nombre'],$_POST['apellido']);
-        }
-        else{
-            echo " Es necesario rellenar todos los campos";
-        }
-
+        $usuario=new Usuario();
+        $usuario->addUsuarios($_POST['nombre'],$_POST['apellido']);
     }
+    else{
+        echo '<script>alert(" Es necesario rellenar todos los campos");</script>';
+    }
+
+}
 ?>
 <html>
+
      <head>
          <title></title>
      </head>

@@ -9,16 +9,18 @@
             if($verificar===TRUE)
             {
                 $usuario->deleteUsuario($_POST['nombre'],$_POST['apellido']);
-            }
-            else{
-                echo "Usted no esta registrado ";
+            } else{
+                echo '<script>alert("Usted no esta registrado ");</script>';
             }
         }
-
+        else{
+            echo '<script>alert("Usted necesita rellenar todos los campos ");</script>';
+        }
     }
 ?>
 <html>
   <body>
+
       <form action ="deleteUsuario.php" method="post">
           <table>
               <tr><h3>Elimine sus Datos</h3></tr>

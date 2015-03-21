@@ -4,6 +4,7 @@ include '../../model/Usuario.php';
 
 if(isset($_POST['verificar']))
 {
+
     if(!empty($_POST['nombre'])&& !empty($_POST['apellido']))
     {
         $usuario=new Usuario();
@@ -13,10 +14,12 @@ if(isset($_POST['verificar']))
             $_SESSION['nombre']=$_POST['nombre'];
             $_SESSION['apellido']=$_POST['apellido'];
             header("Location:editarUsuarioRegistrado.php");
+        }else{
+            echo '<script>alert("Usted no esta registrado ");</script>';
         }
-        else{
-            echo "Usted no esta registrado ";
-        }
+    }
+    else{
+        echo '<script>alert("Usted necesita rellenar todos los campos ");</script>';
     }
 }
 
