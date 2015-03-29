@@ -1,0 +1,21 @@
+{
+  "name" :  "diomedex10 / clase" ,
+  "description" : "Ejemplos de PHP",
+  "type" : "project",
+  "authors" : [
+    {
+      "name" : "Diomedes Pablo A.",
+      "email": "diomedex10@gmail.com",
+      "role" : "teacher"
+    }
+  ],
+  "require" : {
+    "php" : ">= 5.4.0",
+    "dompdf/dompdf": "dev-master"
+  },
+  "autoload" : {
+    "psr-4" : {
+
+    }
+  }
+}
