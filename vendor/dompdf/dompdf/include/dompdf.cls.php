@@ -27,7 +27,7 @@
  * http://www.w3.org/TR/CSS21/visuren.html#propdef-display}).
  * Frame_Decorators augment the basic {@link Frame} class by adding
  * additional properties and methods specific to the particular type of
- * {@link Frame}.  For example, in the CSS layout model, block frames
+ * {@link Frame}.  For example, in the CSS layout Model, block frames
  * (display: block;) contain line boxes that are usually filled with text or
  * other inline frames.  The Block_Frame_Decorator therefore adds a $lines
  * property as well as methods to add {@link Frame}s to lines and to add
@@ -165,14 +165,14 @@ class DOMPDF {
   private $_locale_standard = false;
 
   /**
-   * The default view of the PDF in the viewer
+   * The default View of the PDF in the viewer
    *
    * @var string
    */
   private $_default_view = "Fit";
 
   /**
-   * The default view options of the PDF in the viewer
+   * The default View options of the PDF in the viewer
    *
    * @var array
    */
@@ -376,10 +376,10 @@ class DOMPDF {
   }
 
   /**
-   * Sets the default view
+   * Sets the default View
    *
-   * @param string $default_view The default document view
-   * @param array  $options      The view's options
+   * @param string $default_view The default document View
+   * @param array  $options      The View's options
    */
   function set_default_view($default_view, $options) {
     $this->_default_view = $default_view;
@@ -937,7 +937,7 @@ class DOMPDF {
         continue;
       }
 
-      if ( $name === "dompdf.view" && $this->parse_default_view($value) ) {
+      if ( $name === "dompdf.View" && $this->parse_default_view($value) ) {
         $this->_pdf->set_default_view($this->_default_view, $this->_default_view_options);
       }
     }

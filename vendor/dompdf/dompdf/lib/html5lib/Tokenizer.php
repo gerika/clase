@@ -45,7 +45,7 @@ class HTML5_Tokenizer {
     private $tree;
 
     /**
-     * Current content model we are parsing as.
+     * Current content Model we are parsing as.
      */
     protected $content_model;
 
@@ -55,7 +55,7 @@ class HTML5_Tokenizer {
      */
     protected $token;
 
-    // These are constants describing the content model
+    // These are constants describing the content Model
     const PCDATA    = 0;
     const RCDATA    = 1;
     const CDATA     = 2;
@@ -168,7 +168,7 @@ class HTML5_Tokenizer {
 
                     if($char === '&' && $amp_cond) {
                         /* U+0026 AMPERSAND (&)
-                        When the content model flag is set to one of the PCDATA or RCDATA
+                        When the content Model flag is set to one of the PCDATA or RCDATA
                         states and the escape flag is false: switch to the
                         character reference data state. Otherwise: treat it as per
                         the "anything else" entry below. */
@@ -181,7 +181,7 @@ class HTML5_Tokenizer {
                     ) {
                         /*
                         U+002D HYPHEN-MINUS (-)
-                        If the content model flag is set to either the RCDATA state or
+                        If the content Model flag is set to either the RCDATA state or
                         the CDATA state, and the escape flag is false, and there are at
                         least three characters before this one in the input stream, and the
                         last four characters in the input stream, including this one, are
@@ -199,10 +199,10 @@ class HTML5_Tokenizer {
 
                     /* U+003C LESS-THAN SIGN (<) */
                     } elseif($char === '<' && $lt_cond) {
-                        /* When the content model flag is set to the PCDATA state: switch
+                        /* When the content Model flag is set to the PCDATA state: switch
                         to the tag open state.
 
-                        When the content model flag is set to either the RCDATA state or
+                        When the content Model flag is set to either the RCDATA state or
                         the CDATA state and the escape flag is false: switch to the tag
                         open state.
 
@@ -215,7 +215,7 @@ class HTML5_Tokenizer {
                         $gt_cond &&
                         substr($lastFourChars, 1) === '-->'
                     ) {
-                        /* If the content model flag is set to either the RCDATA state or
+                        /* If the content Model flag is set to either the RCDATA state or
                         the CDATA state, and the escape flag is true, and the last three
                         characters in the input stream including this one are U+002D
                         HYPHEN-MINUS, U+002D HYPHEN-MINUS, U+003E GREATER-THAN SIGN ("-->"),
@@ -281,7 +281,7 @@ class HTML5_Tokenizer {
                 break;
 
                 case 'character reference data':
-                    /* (This cannot happen if the content model flag
+                    /* (This cannot happen if the content Model flag
                     is set to the CDATA state.) */
 
                     /* Attempt to consume a character reference, with no
@@ -330,7 +330,7 @@ class HTML5_Tokenizer {
                         break;
 
                         case self::PCDATA:
-                            /* If the content model flag is set to the PCDATA state
+                            /* If the content Model flag is set to the PCDATA state
                             Consume the next input character: */
                             // We consumed above.
 
@@ -425,7 +425,7 @@ class HTML5_Tokenizer {
                         $this->content_model === self::RCDATA ||
                         $this->content_model === self::CDATA
                     ) {
-                        /* If the content model flag is set to the RCDATA or CDATA
+                        /* If the content Model flag is set to the RCDATA or CDATA
                         states... */
                         $name = strtolower($this->stream->charsWhile(self::ALPHA));
                         $following = $this->stream->char();
@@ -478,7 +478,7 @@ class HTML5_Tokenizer {
                             $state = 'tag name';
                         }
                     } elseif ($this->content_model === self::PCDATA) {
-                        /* Otherwise, if the content model flag is set to the PCDATA
+                        /* Otherwise, if the content Model flag is set to the PCDATA
                         state [...]: */
                         $char = $this->stream->char();
 
@@ -1138,7 +1138,7 @@ class HTML5_Tokenizer {
                 break;
 
                 case 'bogus comment':
-                    /* (This can only happen if the content model flag is set to the PCDATA state.) */
+                    /* (This can only happen if the content Model flag is set to the PCDATA state.) */
                     /* Consume every character up to the first U+003E GREATER-THAN SIGN
                     character (>) or the end of the file (EOF), whichever comes first. Emit
                     a comment token whose data is the concatenation of all the characters
@@ -1189,7 +1189,7 @@ class HTML5_Tokenizer {
                     match for the string "[CDATA[" (the five uppercase letters
                     "CDATA" with a U+005B LEFT SQUARE BRACKET character before
                     and after), then consume those characters and switch to the
-                    CDATA section state (which is unrelated to the content model
+                    CDATA section state (which is unrelated to the content Model
                     flag's CDATA state). */
 
                     /* Otherwise, is is a parse error. Switch to the bogus comment state.

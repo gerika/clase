@@ -126,7 +126,7 @@ class Stylesheet {
    * The following are non standard extensions for undocumented specific environments.
    *   static, visual, bitmap, paged, dompdf
    * Note, even though the generated pdf file is intended for print output,
-   * the desired content might be different (e.g. screen or projection view of html file).
+   * the desired content might be different (e.g. screen or projection View of html file).
    * Therefore allow specification of content by dompdf setting DOMPDF_DEFAULT_MEDIA_TYPE.
    * If given, replace media "print" by DOMPDF_DEFAULT_MEDIA_TYPE.
    * (Previous version $ACCEPTED_MEDIA_TYPES = $ACCEPTED_GENERIC_MEDIA_TYPES + $ACCEPTED_DEFAULT_MEDIA_TYPE)

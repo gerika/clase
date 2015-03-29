@@ -73,8 +73,8 @@ class Font_Table_glyf extends Font_Table {
     $n = 500;
 
     $s = "<h3>"."Only the first $n simple glyphs are shown (".count($this->data)." total)
-    <div class='glyph-view simple'>Simple glyph</div>
-    <div class='glyph-view composite'>Composite glyph</div>
+    <div class='glyph-View simple'>Simple glyph</div>
+    <div class='glyph-View composite'>Composite glyph</div>
     Zoom: <input type='range' value='100' max='400' onchange='Glyph.resize(this.value)' />
     </h3>
     <script>
@@ -107,7 +107,7 @@ class Font_Table_glyf extends Font_Table {
       $name = isset($names[$g]) ? $names[$g] : sprintf("uni%04x", $char);
       $char = $char ? "&#{$glyphIndexArray[$g]};" : "";
 
-      $s .= "<div class='glyph-view $type' id='glyph-$g'>
+      $s .= "<div class='glyph-View $type' id='glyph-$g'>
               <span class='glyph-id'>$g</span> 
               <span class='char'>$char</span>
               <span class='char-name'>$name</span>

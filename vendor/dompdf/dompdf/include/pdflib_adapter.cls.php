@@ -548,7 +548,7 @@ class PDFLib_Adapter implements Canvas {
      * fitwindow Fit the complete page to the window.
      * fixed
      */
-    //$this->_pdf->set_parameter("openaction", $view);
+    //$this->_pdf->set_parameter("openaction", $View);
   }
 
   /**

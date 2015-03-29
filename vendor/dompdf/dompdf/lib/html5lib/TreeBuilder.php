@@ -584,7 +584,7 @@ class HTML5_TreeBuilder {
             $this->original_mode = $this->mode;
             /* 7. Switch the insertion mode to "in CDATA/RCDATA" */
             $this->mode = self::IN_CDATA_RCDATA;
-            /* 5. Switch the tokeniser's content model flag to the CDATA state. */
+            /* 5. Switch the tokeniser's content Model flag to the CDATA state. */
             $this->content_model = HTML5_Tokenizer::CDATA;
 
         /* An end tag with the tag name "head" */
@@ -1328,7 +1328,7 @@ class HTML5_TreeBuilder {
                     $this->flag_frameset_ok = false;
                     $this->mode = self::IN_CDATA_RCDATA;
 
-                    /* Switch the tokeniser's content model flag to the
+                    /* Switch the tokeniser's content Model flag to the
                     RCDATA state. */
                     $this->content_model = HTML5_Tokenizer::RCDATA;
                 break;
@@ -3647,7 +3647,7 @@ class HTML5_TreeBuilder {
         $this->fragment = true;
         if ($context) {
             $context = $this->dom->createElementNS(self::NS_HTML, $context);
-            /* 4.1. Set the HTML parser's tokenization  stage's content model
+            /* 4.1. Set the HTML parser's tokenization  stage's content Model
              * flag according to the context element, as follows: */
             switch ($context->tagName) {
             case 'title': case 'textarea':

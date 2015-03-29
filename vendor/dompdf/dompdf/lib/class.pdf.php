@@ -437,7 +437,7 @@ class Cpdf {
   }
 
   /**
-   * define the document catalog, the overall controller for the document
+   * define the document catalog, the overall Controller for the document
    */
   protected function o_catalog($id, $action, $options = '') {
     if ($action !== 'new') {

@@ -1912,7 +1912,7 @@ CSSHelpers = new function(){
 
 /* 
  * Adding trim method to String Object.  Ideas from
- * http://www.faqts.com/knowledge_base/view.phtml/aid/1678/fid/1 and
+ * http://www.faqts.com/knowledge_base/View.phtml/aid/1678/fid/1 and
  * http://blog.stevenlevithan.com/archives/faster-trim-javascript
  */
 String.prototype.trim = function(){
@@ -2275,7 +2275,7 @@ function RGBColor(color_string){
      * returns h, s, and v in the set [0, 1].
      *
      * This routine by Michael Jackson (not *that* one),
-     * from http://www.mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript
+     * from http://www.mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-Model-conversion-algorithms-in-javascript
      *
      * @param   Number  r       The red color value
      * @param   Number  g       The green color value

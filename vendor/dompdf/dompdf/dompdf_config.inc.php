@@ -177,13 +177,13 @@ def("DOMPDF_PDF_BACKEND", "CPDF");
 //def("DOMPDF_PDFLIB_LICENSE", "your license key here");
 
 /**
- * html target media view which should be rendered into pdf.
+ * html target media View which should be rendered into pdf.
  * List of types and parsing rules for future extensions:
  * http://www.w3.org/TR/REC-html40/types.html
  *   screen, tty, tv, projection, handheld, print, braille, aural, all
  * Note: aural is deprecated in CSS 2.1 because it is replaced by speech in CSS 3.
  * Note, even though the generated pdf file is intended for print output,
- * the desired content might be different (e.g. screen or projection view of html file).
+ * the desired content might be different (e.g. screen or projection View of html file).
  * Therefore allow specification of content here.
  */
 def("DOMPDF_DEFAULT_MEDIA_TYPE", "screen");

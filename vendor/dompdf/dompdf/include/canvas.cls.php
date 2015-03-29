@@ -336,7 +336,7 @@ interface Canvas {
   function set_opacity($opacity, $mode = "Normal");
 
   /**
-   * Sets the default view
+   * Sets the default View
    *
    * @param string $view
    * 'XYZ'  left, top, zoom

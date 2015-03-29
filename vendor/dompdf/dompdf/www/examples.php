@@ -37,7 +37,7 @@ function getPath(hash) {
     case "html": 
       return "test/"+file;
     case "pdf":
-      return "<?php echo $dompdf; ?>&options[Attachment]=0&input_file="+file+"#toolbar=0&view=FitH&statusbar=0&messages=0&navpanes=0";
+      return "<?php echo $dompdf; ?>&options[Attachment]=0&input_file="+file+"#toolbar=0&View=FitH&statusbar=0&messages=0&navpanes=0";
   }
 }
 
@@ -124,7 +124,7 @@ foreach ( $sections as $section => $files ) {
     echo "<li style=\"list-style-image: url('$arrow');\">\n";
     echo " 
   [<a class=\"button\" target=\"preview\" onclick=\"setHash('$filename,html')\" href=\"test/$filename\">HTML</a>] 
-  [<a class=\"button\" target=\"preview\" onclick=\"setHash('$filename,pdf')\" href=\"$dompdf&amp;options[Attachment]=0&amp;input_file=" . rawurlencode($filename) . "#toolbar=0&amp;view=FitH&amp;statusbar=0&amp;messages=0&amp;navpanes=0\">PDF</a>] ";
+  [<a class=\"button\" target=\"preview\" onclick=\"setHash('$filename,pdf')\" href=\"$dompdf&amp;options[Attachment]=0&amp;input_file=" . rawurlencode($filename) . "#toolbar=0&amp;View=FitH&amp;statusbar=0&amp;messages=0&amp;navpanes=0\">PDF</a>] ";
     echo $title;
     echo "</li>\n";
   }
