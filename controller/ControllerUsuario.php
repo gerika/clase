@@ -10,7 +10,6 @@ switch ($opcion) {
         $result = false;
         $modelUsuario = new Usuario();
         $data = $_POST;
-
         if( $modelUsuario->validInputs($data) ) {
             $result = $modelUsuario->addUsuario($data);
             if ($result == true) {
@@ -57,5 +56,27 @@ switch ($opcion) {
             header("Location: http://localhost/clase/view/usuario/listarUsuario.php?lista=" .serialize($lista));
         }
 
+        break;
+    case 'pdf':
+        $modelUsuario = new Usuario();
+        $lista = $modelUsuario->getAllUsuarios();
+        $list=serialize($lista);
+
+        ob_start();
+
+        include '../view/template/lisUsuario.php';
+        $html = ob_get_clean();
+        require '../vendor/autoload.php';
+
+        define('DOMPDF_ENABLE_AUTOLOAD', false);
+
+        require_once '../vendor/dompdf/dompdf/dompdf_config.inc.php';
+
+
+
+        $dompdf = new DOMPDF();
+        $dompdf->load_html($html);
+        $dompdf->render();
+        $dompdf->stream("sample.pdf");
         break;
 }

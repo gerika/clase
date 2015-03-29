@@ -5,7 +5,7 @@ class ConectionMsql
 {
     protected $_conection;
     private $_host = '127.0.0.1';
-    private $_password ='admin';
+    private $_password ='';
     private $_user = 'root';
     private $_dataBase = 'crud';
 

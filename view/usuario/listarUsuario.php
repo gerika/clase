@@ -1,6 +1,7 @@
 <?php $listar = unserialize($_GET['lista']); ?>
 <div>
-    <a href="/clase/controller/ControllerUsuario.php?op=add">Nuevo</a>
+    <a href="/clase/controller/ControllerUsuario.php?op=add">Nuevo</a><br>
+    <a href="/clase/controller/ControllerUsuario.php?op=pdf">Descargar PDF</a>
 </div>
 <br>
 <p>
