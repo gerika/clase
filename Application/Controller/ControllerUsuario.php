@@ -73,7 +73,6 @@ switch ($opcion) {
         ob_start();
         extract($data);
         include '../view/template/listUsuarios.php';
-        //include '../view/template/test.php';
         $html = ob_get_clean();
 
         $dompdf = new DOMPDF();
