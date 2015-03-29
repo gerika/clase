@@ -11,7 +11,6 @@
         <th>Apellidos</th>
     </tr>
     <tbody>
-
     <?php foreach($listar as $row) { ?>
         <tr>
             <td><?php echo $row['id'];?></td>
