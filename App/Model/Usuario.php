@@ -1,8 +1,7 @@
 <?php
+namespace App\Model;
 
-require_once 'ConectionMysql.php';
-
-class Usuario  extends  ConectionMsql
+class Usuario extends ConectionMsql
 {
     protected $_conection;
 
@@ -10,7 +9,6 @@ class Usuario  extends  ConectionMsql
     {
         parent::__construct();
         $this->_conection = $this->getConection();
-
     }
 
     public function getAllUsuarios()
@@ -92,7 +90,7 @@ class Usuario  extends  ConectionMsql
 
     public function validInputs($inputs)
     {
-        if( isset($inputs['txtNombres']) && isset($inputs['txtApellidos'])) {
+        if ( isset($inputs['txtNombres']) && isset($inputs['txtApellidos']) ) {
             $inputs['txtNombres'] = trim($inputs['txtNombres']);
             $inputs['txtApellidos'] = trim($inputs['txtApellidos']);
 

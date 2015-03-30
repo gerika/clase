@@ -15,7 +15,8 @@
   },
   "autoload" : {
     "psr-4" : {
-      "Application\\" : "Application/"
+      "App\\" : "App/",
+      "Library\\" : "Library/"
     }
   }
 }

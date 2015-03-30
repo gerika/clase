@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Model;
 
 class ConectionMsql
 {
@@ -23,4 +23,5 @@ class ConectionMsql
     {
         return $this->_conection;
     }
+
 }
