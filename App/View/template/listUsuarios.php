@@ -2,7 +2,7 @@
 
 <br>
 <p>
-   <h1>Listado de Usuarios</h1>
+   <h1><?php echo $titulo?></h1>
 </p>
 <table>
     <tr>

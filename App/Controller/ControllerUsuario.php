@@ -2,7 +2,7 @@
 namespace App\Controller;
 require '../../vendor/autoload.php';
 
-use App\Model\Usuario;
+use App\Model\Usuario ;
 use Library\View\Template;
 use Library\Pdf\Pdf;
 
@@ -66,7 +66,7 @@ switch ($opcion) {
         $modelUsuario = new Usuario();
         $list = $modelUsuario->getAllUsuarios();
 
-        $data = array('list' => serialize($list));
+        $data = array('list' => serialize($list), 'titulo' => 'Listado de PDF');
         $html = Template::render($data, 'listUsuarios.php');
         Pdf::create($html, 'listado');
 
