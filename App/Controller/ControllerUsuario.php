@@ -9,7 +9,7 @@ use Library\Pdf\Pdf;
 $opcion = $_REQUEST['op'];
 switch ($opcion) {
     case 'add':
-            header("Location:../view/usuario/addUsuario.php");
+            header("Location:../App/View/usuario/addUsuario.php");
         break;
     case 'addSave':
         $result = false;
@@ -22,7 +22,7 @@ switch ($opcion) {
                 header("Location:http://localhost/clase/App/controller/ControllerUsuario.php?op=list&result=1");
             }
         } else {
-            header("Location:../view/usuario/addUsuario.php?error=1");
+            header("Location:../App/View/usuario/addUsuario.php?error=1");
         }
         break;
     case 'edit':
@@ -33,7 +33,7 @@ switch ($opcion) {
     case 'editSave':
         $modelUsuario = new Usuario();
         $data = $_POST;
-        //var_dump($modelUsuario->validInputs($data));exit;
+
         if( $modelUsuario->validInputs($data) ) {
             $result = $modelUsuario->editUsuario($data);
             if ($result == true) {

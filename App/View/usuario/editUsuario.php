@@ -11,7 +11,7 @@
     <?php endif;?>
 <?php endif;?>
 <h2> Editar Usuario</h2>
-<form method="POST" action="/clase/controller/ControllerUsuario.php" >
+<form method="POST" action="/clase/App/controller/ControllerUsuario.php" >
     <table>
         <tr>
             <td>Id:</td>
