@@ -115,7 +115,7 @@ class Usuario extends ConectionMsql
         } else{
            return false;
         }
-        
+
     }
 
 }

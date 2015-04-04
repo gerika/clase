@@ -3,5 +3,6 @@
 /.idea
 
 /vendor/*
+/public/files/*
 
 
