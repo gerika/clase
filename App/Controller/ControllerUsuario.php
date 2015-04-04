@@ -28,7 +28,7 @@ switch ($opcion) {
     case 'edit':
         $modelUsuario = new Usuario();
         $usuario = $modelUsuario->getUsuario($_GET['id']);
-        header("Location:../view/usuario/editUsuario.php?usuario=".serialize($usuario));
+        header("Location:../View/usuario/editUsuario.php?usuario=".serialize($usuario));
         break;
     case 'editSave':
         $modelUsuario = new Usuario();
@@ -37,6 +37,7 @@ switch ($opcion) {
         if( $modelUsuario->validInputs($data) ) {
             $result = $modelUsuario->editUsuario($data);
             if ($result == true) {
+               $modelUsuario->uploadFile($_FILES);
                header("Location:http://localhost/clase/App/controller/ControllerUsuario.php?op=list&result=1");
             }
         } else {

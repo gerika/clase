@@ -105,4 +105,17 @@ class Usuario extends ConectionMsql
         return true;
     }
 
+    public function uploadFile($data)
+    {
+        $target_path = __DIR__."../../../public/files/usuario/";
+        $target_path = $target_path . basename( $data['fImage']['name']);
+
+        if (move_uploaded_file($data['fImage']['tmp_name'], $target_path)) {
+           return true;
+        } else{
+           return false;
+        }
+        
+    }
+
 }

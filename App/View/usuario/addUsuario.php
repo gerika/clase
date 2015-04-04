@@ -11,7 +11,7 @@
             <?php endif;?>
         <?php endif;?>
         <h2>Ingresar Usuario</h2>
-        <form method="POST" action="/clase/App/controller/ControllerUsuario.php" enctype="multipart/form-data">
+        <form method="POST" action="../../Controller/ControllerUsuario.php" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td>Nombres:</td>
@@ -25,7 +25,6 @@
                     <td>Imagen:</td>
                     <td> <input type="file" name="fImage" placeholder="Ingrese Imagen"></td>
                 </tr>
-                <tr></tr>
             </table>
             <br>
             <input type="hidden" name="op" value="addSave">

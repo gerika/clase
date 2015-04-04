@@ -11,7 +11,7 @@
     <?php endif;?>
 <?php endif;?>
 <h2> Editar Usuario</h2>
-<form method="POST" action="/clase/App/controller/ControllerUsuario.php" >
+<form method="POST" action="../../Controller/ControllerUsuario.php" enctype="multipart/form-data">
     <table>
         <tr>
             <td>Id:</td>
@@ -25,7 +25,10 @@
             <td>Apellidos:</td>
             <td> <input type="text" name="txtApellidos" value="<?php echo $usuario['apellidos'];?>" placeholder="Ingrese sus apellidos"></td>
         </tr>
-        <tr></tr>
+        <tr>
+            <td>Imagen:</td>
+            <td> <input type="file" name="fImage" placeholder="Ingrese Imagen"></td>
+        </tr>
     </table>
     <br>
     <input type="hidden" name="op" value="editSave">
